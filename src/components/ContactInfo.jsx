@@ -22,37 +22,45 @@ const ContactInfo = (props) => {
         <>
             <fieldset style={standardStyles}>
                 <legend>Contact Details</legend>
-                <LabeledInput type='text' id='name' text='Name' placeholder='John Smith'/>
-                <LabeledInput type='email' id='email' text='email' placeholder='example@placeholder.com'/>
-                <LabeledInput type='tel' id='phone' text='Phone #' placeholder='555-555-5555'/>
-                <LabeledInput type='url' id='socialMedia' text='Social Media' placeholder='linkedin.com/helloThere'/>
+
+                <LabeledInput
+                    text='Name'
+                    id='fullName'
+                    type='text'
+                    placeholder='John Smith'
+                    value={props.fields.fullName}
+                    handler={props.handler}
+                />
+
+                <LabeledInput
+                    text='email'
+                    id='email'
+                    type='email'
+                    placeholder='example@placeholder.com'
+                    value={props.fields.email}
+                    handler={props.handler}
+                />
+        
+                <LabeledInput
+                    text='Phone Number'
+                    id='phone'
+                    type='tel'
+                    placeholder='555-555-5555'
+                    value={props.fields.phone}
+                    handler={props.handler}
+                />
+        
+                <LabeledInput
+                    text='Social Media'
+                    id='socialMedia'
+                    type='text'
+                    placeholder='linked.com/helloThere'
+                    value={props.fields.socialMedia}
+                    handler={props.handler}
+                />
             </fieldset>
         </>
     )
 }
-
-// const NameForm = (props) => {
-//     return (
-//         <input style={props.style} type="text" placeholder="name" />
-//     )
-// }
-//
-// const EmailForm = (props) => {
-//     return (
-//         <input style={props.style} type="email" placeholder="email" />
-//     )
-// }
-//
-// const PhoneNumForm = (props) => {
-//     return (
-//         <input style={props.style} id="phone" type="tel" placeholder="phone number" />
-//     )
-// }
-//
-// const SocialMediaForm = (props) => {
-//     return (
-//         <input style={props.style} type="url" placeholder="linkedin"/>
-//     )
-// }
 
 export default ContactInfo

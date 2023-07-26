@@ -17,7 +17,16 @@ const LabeledInput = (props) => {
     return (
             <>
                 <label style={props.style || defaultStyles} htmlFor={props.id}>{props.text}</label>
-                <input style={props.style || defaultStyles} type={props.type} id={props.id} name={props.id} placeholder={props.placeholder} />
+
+                <input
+                    style={props.style || defaultStyles}
+                    type={props.type}
+                    id={props.id}
+                    name={props.id}
+                    placeholder={props.placeholder}
+                    value={props.value}
+                    onChange={props.handler}
+                />
             </>
     )
 }
@@ -25,7 +34,7 @@ const LabeledInput = (props) => {
 LabeledInput.defaultProps = {
     type: 'text',
     text: 'Default Text Input',
-    placeholder: 'placeholder',
+    placeholder: '',
 }
 
 export default LabeledInput

@@ -6,8 +6,9 @@
 }
 
 #container {
+    display:flex;
     background-color: pink;
-    border : 2px solid red;
+    border : 5px solid red;
 }
 
 @keyframes logo-spin {
