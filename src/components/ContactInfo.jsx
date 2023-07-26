@@ -54,7 +54,7 @@ const ContactInfo = (props) => {
                     text='Social Media'
                     id='socialMedia'
                     type='text'
-                    placeholder='linked.com/helloThere'
+                    placeholder='linkedin.com/helloThere'
                     value={props.fields.socialMedia}
                     handler={props.handler}
                 />
@@ -63,4 +63,17 @@ const ContactInfo = (props) => {
     )
 }
 
-export default ContactInfo
+const CV_ContactInfo = (props) => {
+
+    return (
+        
+            <div>
+                <div>{props.fields.fullName}</div>
+                <div>{props.fields.email}</div>
+                <div>{props.fields.phone}</div>
+                <div>{props.fields.socialMedia}</div>
+            </div>
+    )
+}
+
+export { ContactInfo, CV_ContactInfo };

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../styles/App.css'
-import ContactInfo from './ContactInfo.jsx'
+import { ContactInfo, CV_ContactInfo } from './ContactInfo.jsx'
 import { Education, CV_Education } from './Education.jsx'
 import { JobExperience, CV_JobExp } from './JobExperience.jsx'
 import CV from './CV.jsx'
@@ -40,7 +40,7 @@ function App() {
         setFields(fieldArray);
     }
      
-    const [components, setComponents] = useState([]);
+    const [components, setComponents] = useState([{type: 'contacts'}]);
 
     const handleAdd1 = (event) => {
         event.preventDefault();
@@ -64,15 +64,21 @@ function App() {
     return (
         <div id='container'>
             <form>
-                <ContactInfo fields={fields[0]} handler={handleCV}/>
+                <div id='contactInput'>
+                    <ContactInfo
+                        key='-1'
+                        fields={fields[0]}
+                        handler={(event) => handleCV(0, event)}/>
+                </div>
+
                 <div id='eduInput'>
                     {components.map((comp, index) => {
                         if (comp.type == 'edu') {
                             return (
                                 <Education
                                     key={index}
-                                    fields={fields[index + 1]}
-                                    handler={(event) => handleCV(index + 1, event)}
+                                    fields={fields[index]}
+                                    handler={(event) => handleCV(index, event)}
                                     delHandler={(event) => handleDel(index, event)}     
                                 />
                             )
@@ -82,14 +88,15 @@ function App() {
                     <button onClick={handleAdd1}>Add Education</button>
                 </div>
 
+
                 <div id='jobInput'>
                     {components.map((comp, index) => {
                         if (comp.type == 'job') {
                             return (
                                 <JobExperience
                                     key={index}
-                                    fields={fields[index + 1]}
-                                    handler={(event) => handleCV(index + 1, event)}
+                                    fields={fields[index]}
+                                    handler={(event) => handleCV(index, event)}
                                     delHandler={(event) => handleDel(index, event)}     
                                 />
                             )
@@ -102,14 +109,24 @@ function App() {
                 
             </form>
 
+
             <div>
+
+                <div id='contactCV'>
+                    <CV_ContactInfo
+                        key='-1'
+                        fields={fields[0]}
+                    />
+                </div>
+
                 <div id='eduCV'>
+                    Education
                     {components.map((comp, index) => {
                         if (comp.type == 'edu') {
                             return (
                                 <CV_Education
                                     key={index}
-                                    fields={fields[index + 1]}
+                                    fields={fields[index]}
                                 />
                             )
                         }
@@ -117,12 +134,13 @@ function App() {
                 </div>
 
                 <div id='jobCV'>
+                    Job Experience
                     {components.map((comp, index) => {
                         if (comp.type == 'job') {
                             return (
                                 <CV_JobExp
                                     key={index}
-                                    fields={fields[index + 1]}
+                                    fields={fields[index]}
                                 />
                             )
                         }
