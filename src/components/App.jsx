@@ -43,6 +43,21 @@ const cvStyles = {
         padding: '30px',
     },
 
+    header: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+        width: '130px',
+        height: '75px',
+
+        border: '2px solid ' + rosePine.love,
+        borderRadius: '5px',
+        padding: '3px',
+        marginBottom: '5px',
+    },
+
     CV_Form: {
         display: 'flex',
         flexDirection: 'column',
@@ -317,6 +332,21 @@ function App() {
 
     return (
         <div id='container' style={cvStyles.container}>
+
+            <div id='header' style={cvStyles.header}>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+                <p style={{color: rosePine.rose, fontSize: '.75rem'}}> Regis1272 ©</p>
+
+                <a href="https://github.com/Regis1272/">
+                <span class="fab fa-github" style={{color: rosePine.love}}></span>
+                </a>
+
+                <p style={{color: rosePine.rose, fontSize: '.55rem'}}>Color Palette: <a href="https://rosepinetheme.com/">Rosé Pine</a></p>
+                <p style={{color: rosePine.rose, fontSize: '.55rem'}}>Font: <a href="https://fonts.google.com/specimen/REM">REM</a></p>
+            
+            </div>
+
             <form id='CV_Form' style={cvStyles.CV_Form}>
 
                 <h2>Personal Info</h2>

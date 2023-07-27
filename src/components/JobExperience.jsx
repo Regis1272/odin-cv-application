@@ -72,7 +72,7 @@ const CV_JobExp = (props) => {
             <div style={props.styles.CV_Title}>{props.fields.position}</div>
             <div>
                 <span style={props.styles.CV_Date}>{props.fields.dateEmployed}</span>
-                <span> to </span>
+                {(props.fields.dateEmployed != '') && <span> to </span>}
                 <span style={props.styles.CV_Date}>{props.fields.dateLeft}</span>
             </div>
             <p style={{padding: '5px 20px 0 20px'}}>{props.fields.description}</p>
