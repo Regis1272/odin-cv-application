@@ -5,6 +5,7 @@ import '../styles/fonts.css'
 import { ContactInfo, CV_ContactInfo } from './ContactInfo.jsx'
 import { Education, CV_Education } from './Education.jsx'
 import { JobExperience, CV_JobExp } from './JobExperience.jsx'
+import { testObjects, testFields } from './testUser.jsx'
 import CV from './CV.jsx'
 
 const sysFontStack = 'REM, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif'
@@ -56,6 +57,16 @@ const cvStyles = {
         borderRadius: '5px',
         padding: '3px',
         marginBottom: '5px',
+    },
+    
+    generateBtn: {
+        backgroundColor: rosePine.foam,
+        color: rosePine.base,
+        fontWeight: '900',
+        border: '2px solid ' + rosePine.pine,
+
+        width: '130px',
+        height: '75px',
     },
 
     CV_Form: {
@@ -330,21 +341,35 @@ function App() {
 
     }
 
+    // Test function for data imported from testUser.jsx
+    const generateCV = (event) => {
+        event.preventDefault();
+        setComponents(testObjects);
+        setFields(testFields);
+    }
+
     return (
         <div id='container' style={cvStyles.container}>
 
-            <div id='header' style={cvStyles.header}>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+            <div>
+                <div id='header' style={cvStyles.header}>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-                <p style={{color: rosePine.rose, fontSize: '.75rem'}}> Regis1272 ©</p>
+                    <p style={{color: rosePine.rose, fontSize: '.75rem'}}> Regis1272 ©</p>
 
-                <a href="https://github.com/Regis1272/">
-                <span class="fab fa-github" style={{color: rosePine.love}}></span>
-                </a>
+                    <a href="https://github.com/Regis1272/">
+                    <span class="fab fa-github" style={{color: rosePine.love}}></span>
+                    </a>
 
-                <p style={{color: rosePine.rose, fontSize: '.55rem'}}>Color Palette: <a href="https://rosepinetheme.com/">Rosé Pine</a></p>
-                <p style={{color: rosePine.rose, fontSize: '.55rem'}}>Font: <a href="https://fonts.google.com/specimen/REM">REM</a></p>
-            
+                    <p style={{color: rosePine.rose, fontSize: '.55rem'}}>Color Palette: <a href="https://rosepinetheme.com/">Rosé Pine</a></p>
+                    <p style={{color: rosePine.rose, fontSize: '.55rem'}}>Font: <a href="https://fonts.google.com/specimen/REM">REM</a></p>
+                
+                </div>
+
+                <button onClick={generateCV} style={cvStyles.generateBtn}>
+                    Generate CV
+                </button>
+
             </div>
 
             <form id='CV_Form' style={cvStyles.CV_Form}>
