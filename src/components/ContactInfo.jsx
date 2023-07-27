@@ -19,12 +19,12 @@ const ContactInfo = (props) => {
     }
 
     return (
-        <>
-            <fieldset style={standardStyles}>
-                <legend>Contact Details</legend>
+        <div style={props.styles.input_form}>
+            <fieldset style={props.styles.fieldset}>
 
                 <LabeledInput
-                    text='Name'
+                    styles={props.styles}
+                    text='Full Name'
                     id='fullName'
                     type='text'
                     placeholder='John Smith'
@@ -33,6 +33,7 @@ const ContactInfo = (props) => {
                 />
 
                 <LabeledInput
+                    styles={props.styles}
                     text='email'
                     id='email'
                     type='email'
@@ -42,6 +43,7 @@ const ContactInfo = (props) => {
                 />
         
                 <LabeledInput
+                    styles={props.styles}
                     text='Phone Number'
                     id='phone'
                     type='tel'
@@ -51,6 +53,7 @@ const ContactInfo = (props) => {
                 />
         
                 <LabeledInput
+                    styles={props.styles}
                     text='Social Media'
                     id='socialMedia'
                     type='text'
@@ -59,7 +62,7 @@ const ContactInfo = (props) => {
                     handler={props.handler}
                 />
             </fieldset>
-        </>
+        </div>
     )
 }
 
@@ -67,11 +70,15 @@ const CV_ContactInfo = (props) => {
 
     return (
         
-            <div>
+            <div style={props.styles.CV_ContactName}>
                 <div>{props.fields.fullName}</div>
-                <div>{props.fields.email}</div>
-                <div>{props.fields.phone}</div>
-                <div>{props.fields.socialMedia}</div>
+
+                <div style={props.styles.CV_ContactInfo}>
+                    <div>{props.fields.phone}</div>
+                    <div>{props.fields.email}</div>
+                    <div>{props.fields.socialMedia}</div>
+                </div>
+
             </div>
     )
 }

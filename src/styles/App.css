@@ -5,11 +5,11 @@
   text-align: center;
 }
 
-#container {
-    display:flex;
-    background-color: pink;
-    border : 5px solid red;
-}
+/* #container { */
+/*     display:flex; */
+/*     background-color: pink; */
+/*     border : 5px solid red; */
+/* } */
 
 @keyframes logo-spin {
   from {

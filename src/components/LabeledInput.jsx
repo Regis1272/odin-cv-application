@@ -15,11 +15,11 @@ const LabeledInput = (props) => {
 
 
     return (
-            <>
-                <label style={props.style || defaultStyles} htmlFor={props.id}>{props.text}</label>
+            <div>
+                <label style={props.styles.labels || defaultStyles} htmlFor={props.id}>{props.text}</label>
 
                 <input
-                    style={props.style || defaultStyles}
+                    style={props.styles.user_inputs || defaultStyles}
                     type={props.type}
                     id={props.id}
                     name={props.id}
@@ -27,7 +27,7 @@ const LabeledInput = (props) => {
                     value={props.value}
                     onChange={props.handler}
                 />
-            </>
+            </div>
     )
 }
 

@@ -3,12 +3,11 @@ import LabeledInput from "./LabeledInput"
 const Education = (props) => {
     
     return (
-        <div>
-            <fieldset>
-                <legend>{props.text}</legend>
-
+        <div style={props.styles.input_cell}>
+            <fieldset style={props.styles.fieldset}>
                     <LabeledInput
-                        text='School'
+                        styles={props.styles}
+                        text='Institution'
                         id='school'
                         type='text'
                         placeholder=''
@@ -17,6 +16,7 @@ const Education = (props) => {
                     />
 
                     <LabeledInput
+                        styles={props.styles}
                         text='Title of Study'
                         id='titleOfStudy'
                         type='text'
@@ -26,6 +26,7 @@ const Education = (props) => {
                     />
             
                     <LabeledInput
+                        styles={props.styles}
                         text='Date of Study'
                         id='dateOfStudy'
                         type='date'
@@ -35,7 +36,7 @@ const Education = (props) => {
                     />
 
             </fieldset>
-            <button onClick={props.delHandler}>Remove</button>
+            <button onClick={props.delHandler} style={props.styles.rm_button}>Remove</button>
         </div>
     )
 }
@@ -44,10 +45,10 @@ const Education = (props) => {
 const CV_Education = (props) => {
 
     return (
-        <div>
-            <div>{props.fields.school}</div>
-            <div>{props.fields.titleOfStudy}</div>
-            <div>{props.fields.dateOfStudy}</div>
+        <div style={props.styles.CV_ExpBlock}>
+            <div style={props.styles.CV_Inst}>{props.fields.school}</div>
+            <div style={props.styles.CV_Title}>{props.fields.titleOfStudy}</div>
+            <div style={props.styles.CV_Date}>{props.fields.dateOfStudy}</div>
         </div>
     )
 }
