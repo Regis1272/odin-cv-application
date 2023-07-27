@@ -257,6 +257,7 @@ const cvStyles = {
         borderRadius: '5px',
 
         width: '100%',
+        backgroundColor: rosePine.surface,
 
         padding: '5px',
         margin: '0 10px 10px 0px',
