@@ -258,6 +258,7 @@ const cvStyles = {
 
         width: '100%',
         backgroundColor: rosePine.surface,
+        boxShadow: '0px 0px 40px rgba(0, 0, 0, 0.50)',
 
         padding: '5px',
         margin: '0 10px 10px 0px',
