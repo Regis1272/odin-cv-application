@@ -26,7 +26,7 @@ const JobExperience = (props) => {
                         handler={props.handler}
                     />
 
-                    <div style={{display: 'flex', gap: '5px', width: '100%'}}>
+                    <div style={{display: 'flex', justifyContent: 'spaced-evenly', gap: '5px', width: '100%'}}>
                         <LabeledInput
                             styles={props.styles}
                             text='Date Employed'

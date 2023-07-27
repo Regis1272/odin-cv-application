@@ -78,8 +78,9 @@ const cvStyles = {
         border: '3px solid ' + rosePine.highlightHigh,
         borderRadius: '10px',
         fontSize: '12px',
-        overflow: 'scroll',
-        minWidth: '300px',
+        overflowY: 'scroll',
+        minWidth: '250px',
+        maxWidth: '400px',
         padding: '20px',
     },
 
@@ -142,6 +143,7 @@ const cvStyles = {
         fontWeight: '500',
 
         marginTop: '5px',
+        width: '100%',
     },
 
     input_cell: {
@@ -167,10 +169,6 @@ const cvStyles = {
         backgroundColor: rosePine.overlay,
         borderRadius: '5px',
         width: '100%',
-    },
-
-    description_box: {
-        width: '90%'
     },
 
     CV: {
@@ -385,7 +383,7 @@ function App() {
 
             </div>
 
-            <form id='CV_Form' style={cvStyles.CV_Form}>
+            <form id='CV_Form' class='container' style={cvStyles.CV_Form}>
 
                 <h2>Personal Info</h2>
                 <div id='contactInput'>
@@ -441,7 +439,7 @@ function App() {
             </form>
 
 
-            <div id='CV' style={cvStyles.CV}>
+            <div id='CV' class='container' style={cvStyles.CV}>
 
                 <div id='contactCV' style={cvStyles.CV_Contact}>
                     <CV_ContactInfo

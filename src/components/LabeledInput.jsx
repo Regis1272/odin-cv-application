@@ -15,7 +15,7 @@ const LabeledInput = (props) => {
 
 
     return (
-            <div>
+            <div style={{width: '100%'}}>
                 <label style={props.styles.labels || defaultStyles} htmlFor={props.id}>{props.text}</label>
 
                 <input

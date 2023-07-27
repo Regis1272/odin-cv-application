@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* For Chrome, Safari, and newer versions of Opera */
+.container::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+  border-radius: 5px;
+
+}
+
+.container::-webkit-scrollbar-track {
+  background: transparent; /* Make the background transparent */
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #908caa; /* Make the thumb (the part you drag) a solid color */
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #ebbcba; /* Change the thumb color when hovered */
+}
+
+/* For Firefox */
+.container {
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: #908caa transparent; /* Set the thumb to a solid color and the track to transparent */
+}
