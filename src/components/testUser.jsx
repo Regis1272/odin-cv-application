@@ -36,6 +36,7 @@ const testFields = [
         email: 'example@example.com',
         phone: '123-456-7890',
         socialMedia: 'linkedin.com/in/johndoe',
+        tagline: 'Passionate and dedicated Web Developer with a strong foundational understanding of front-end and back-end technologies. Despite being early in my professional journey, I bring a commitment to continuous learning, problem-solving, and the drive to create intuitive user experiences. Eager to leverage my technical skills and innovative thinking in a collaborative environment to contribute to meaningful projects and further grow as a developer.'
     },
     {
         ...blankFields,

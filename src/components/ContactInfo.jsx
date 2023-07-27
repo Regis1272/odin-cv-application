@@ -61,6 +61,16 @@ const ContactInfo = (props) => {
                     value={props.fields.socialMedia}
                     handler={props.handler}
                 />
+                
+                <LabeledInput
+                    styles={props.styles}
+                    text='Tagline'
+                    id='tagLine'
+                    type='textarea'
+                    placeholder='Wow, I am a great employee!'
+                    value={props.fields.tagline}
+                    handler={props.handler}
+                />
             </fieldset>
         </div>
     )
@@ -78,7 +88,10 @@ const CV_ContactInfo = (props) => {
                     <div>{props.fields.email}</div>
                     <div>{props.fields.socialMedia}</div>
                 </div>
-
+            
+                <div style={props.styles.CV_Tagline}>
+                    {props.fields.tagline}
+                </div>
             </div>
     )
 }

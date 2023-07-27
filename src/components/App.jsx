@@ -217,13 +217,25 @@ const cvStyles = {
 
         fontSize: '.8rem',
         
-        color: rosePine.pine,
+        color: rosePine.foam,
+    },
+
+    CV_Tagline: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'justify',
+
+        width: '100%',
+        padding: '3px',
+        color: rosePine.iris,
+        fontSize: '.8rem',
     },
 
     CV_Titles: {
         display: 'flex',
         alignItems: 'center',
-        color: rosePine.subtle,
+        color: rosePine.gold,
         fontWeight: '500',
         fontSize: '1.3rem',
     },
@@ -233,7 +245,7 @@ const cvStyles = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        textAlign: 'left',
+        textAlign: 'justify',
         
         width: '100%',
         paddingLeft: '20px',
@@ -298,6 +310,7 @@ function App() {
         email: '',
         phone: '',
         socialMedia: '',
+        tagline: '',
 
         school: '',
         titleOfStudy: '',
